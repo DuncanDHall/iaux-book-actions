@@ -410,6 +410,6 @@ export default class ActionsHandler extends LitElement {
   setStickyAdminAccess(value) {
     const domain = window.location.hostname === 'localhost' ? 'localhost' : '.archive.org';
     const expires = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000); // 30 days from now
-    Cookies.setItem('sticky-admin-access', expires, '', '/', domain);
+    Cookies.setItem('sticky-admin-access', value, expires, '/', domain);
   }
 }
